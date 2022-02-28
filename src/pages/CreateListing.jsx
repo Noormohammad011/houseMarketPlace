@@ -94,7 +94,7 @@ const CreateListing = () => {
 
     if (geolocationEnabled) {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${address}&appid=c0855040f4a4da3432479b46ae28fd86`
+        `https://api.openweathermap.org/data/2.5/weather?q=${address}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`
       )
 
       const data = await response.json()
